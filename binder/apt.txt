@@ -16,3 +16,4 @@ texlive-lang-german
 dvipng
 ghostscript
 ffmpeg
+poppler-utils
