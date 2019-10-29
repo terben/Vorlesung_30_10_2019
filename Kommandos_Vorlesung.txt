@@ -35,6 +35,12 @@ less LaTeX_TTT_03.pdf
 # automatisere den Prozess der Kompilierung
 bash compile.sh
 
-# speichere all gegebenen Befehle
+# speichere alle gegebenen Befehle in eine Textdatei
+# commands.txt
 history
 history > commands.txt
+
+# remote einloggen auf einem anderem Rechner:
+ssh IhreUniID@z11.cip-aifa.uni-bonn.de
+
+# IhreUniID ist s6......
