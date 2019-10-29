@@ -12,6 +12,7 @@ texlive-latex-recommended
 texlive-science
 texlive-latex-extra
 texlive-fonts-recommended
+texlive-lang-german
 dvipng
 ghostscript
 ffmpeg

@@ -153,7 +153,7 @@ RUN rm -rf tools
 RUN echo "" >> .bashrc
 RUN echo "shopt -s histappend" >> .bashrc
 RUN echo 'PROMPT_COMMAND="history -a;$PROMPT_COMMAND"' >> .bashrc
-RUN echo 'export PS1="${debian_chroot:+($debian_chroot)}\u@EDV-Vorlesung:\w\$"' >> .bashrc
+RUN echo 'export PS1="${debian_chroot:+($debian_chroot)}\u@EDV-Vorlesung:\w\$ "' >> .bashrc
 
 ENTRYPOINT ["/usr/local/bin/repo2docker-entrypoint"]
 
