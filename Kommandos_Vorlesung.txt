@@ -1,0 +1,40 @@
+# zeige, wer eingeloggt ist
+whoami
+
+# zeige, wo (welches Verzeichnis) wir uns befinden
+pwd
+
+# zeige Inhalt des Wurzelverzeichnisses
+ls /
+
+# zeige Inhalt von /home
+ls /home   # erkläre hier <TAB>-Completion
+ls /home/thomas
+
+# zeige Inhalt des gegenwärtigen Verzeichnisses
+ls
+
+# zeige mehr Infos zum Inhalt
+ls -l
+
+# kombiniere Optionen und Argumente
+ls -l /
+
+# neues Verzeichnis anlegen
+mkdir tut  # Unix ist ruhiges Betriebssystem
+
+# wechsle Verzeichnis
+cd LaTeX_Dokumente
+
+# compiliere eine TeX-Datei
+pdflatex LaTeX_TTT_03.tex
+
+# betrachte die Ausgabedatei
+less LaTeX_TTT_03.pdf
+
+# automatisere den Prozess der Kompilierung
+bash compile.sh
+
+# speichere all gegebenen Befehle
+history
+history > commands.txt
