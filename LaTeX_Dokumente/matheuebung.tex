@@ -1,0 +1,125 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[ngerman]{babel}
+\usepackage{units}
+\begin{document}
+
+\section{Mathematischer \"Ubungssatz}
+\subsection{Gleichungsumformungen}
+\subsubsection{Erstes Beispiel (Einfache Gleichung)}
+\begin{equation}
+4x^2 + 2xv + v^2 = (2x + v)^2 - 2xv
+\end{equation}
+%
+\subsubsection{Zweites Beispiel (Gleichung "uber mehrere Zeilen)}
+\begin{eqnarray}
+  (2x + 1)(2x - 1) & = & 7 \nonumber \\
+          4x^2 - 1 & = & 7 \nonumber \\
+             x^2   & = & 2 \nonumber \\
+                x  & = & \pm\sqrt{2}
+\end{eqnarray}
+%
+\subsubsection{Drittes Beispiel (Hochstellung, Wurzeln)}
+\begin{eqnarray}
+\left(a^{\frac{p}{q}}\right)^{rq} & = & \left(\left(\sqrt[q]{a^p}\right)^q\right)^r \nonumber \\
+&= &\left(a^p\right)^r = a^{rp}
+\end{eqnarray}
+%
+\subsubsection{Viertes Beispiel (Br"uche)}
+\begin{equation}
+\frac{1-x^4}{(x^3)^2} - \left(\frac{1}{x}\right)^2 = \frac{1-2x^4}{x^6}
+\end{equation}
+%
+\subsubsection{F"unftes Beispiel (Text innerhalb des Mathematikmodus)}
+\begin{equation}
+  M=\frac{v^2r}G
+\end{equation}
+Mit $G=\unitfrac[6.67\cdot 10^{-11}]{Nm^2}{kg^2}$, $v=\unitfrac[29.77]{km}{s}$ und $r=\unit[1.49570\cdot 10^8]{km}$
+ergibt sich f"ur die Masse der Sonne:
+\begin{equation}
+  M=\frac{(\unitfrac[29.77\cdot 10^3]{m}{s})^2\cdot \unit[1.49570\cdot 10^{11}]{m}}{\unitfrac[6.67\cdot 10^{-11}]{Nm^2}{kg^2}}
+   =\unit[1.98\cdot 10^{30}]{kg}.
+\end{equation}
+%
+\subsubsection{Sechstes Beispiel (Klammerausdruck, Array)}
+\begin{eqnarray}
+  \ln(1+|u|) & = &x-c \nonumber \\
+  1+|u| & = & e^{x-c} \nonumber \\
+  |u| & = & e^{x-c}-1 \nonumber \\
+  u(x) & = & \left\{ \begin{array}{rcl}
+                    e^{x-c}-1 & \mbox{f"ur} & x>c \\
+                    0         & \mbox{f"ur} & x=c \\
+                    -e^{x-c}+1 & \mbox{f"ur} & x<c
+                    \end{array}\right.
+\end{eqnarray}
+\subsubsection{Siebtes Beispiel (Funktionen, verschachtelte Br\"uche)}
+Aus der l'Hospitalschen Regel folgt:
+\[
+\lim_{x\to 0} \frac{\ln\sin(\pi x)}{\ln\sin(x)}=
+\lim_{x\to 0} \frac{\pi\frac{\cos(\pi x)}{\sin(\pi x)}}{\frac{\cos(x)}{\sin(x)}}=
+\lim_{x\to 0} \frac{\pi \tan(x)}{\tan(\pi x)}=
+\lim_{x\to 0} \frac{\pi/\cos^2(x)}{\pi/\cos^2(\pi x)}=
+\lim_{x\to 0} \frac{\cos^2(\pi x)}{\cos^2(x)}=1
+\]
+%
+\subsection{Die L"osung von Integralen (Integrale)}
+\begin{equation}
+\label{c}
+  f(x) = \int^b_a \frac{3x^2}{x^3-1}\,dx
+\end{equation}
+Exkurs:
+\begin{eqnarray}
+  u & := & x^3-1 \nonumber \\
+  \frac{du}{dx} & = & 3x^2 \nonumber \\
+  dx & = & \frac{du}{3x^2} \nonumber \\
+  \int\frac{3x^2}{x^3-1}\, dx & = & \int \frac 1u\, du \\
+  f(x) & = & \ln(|u|)+c \label{d}
+\end{eqnarray}
+Aus (\ref{c}) und (\ref{d}) folgt damit:
+\[
+f(x)=[\ln(x^3-1)]^b_a.
+\]
+\subsubsection{Die Integral - Multiplikationsregel}
+Es gilt:
+\[
+  \int^b_a g'(x)f(x)\,dx = \left[g(x)f(x)\right]^b_a - \int^b_a g(x)f'(x)\,dx
+\]
+Berechnen wir damit als Beispiel das Integral $\int \ln(x)\, dx = \int 1\cdot \ln(x)\, dx$!\\
+\textbf{F\"uhren Sie die Berechnung der Integrals in diesem Dokument zuende!}
+%
+\subsection{Vektoren und Matrizen (Vektoren, Arrays, Fortsetzungspunkte)}
+Der Winkel $\alpha$ zwischen zwei Vektoren $\vec{a}$ und $\vec{b}$ ist gegeben durch:
+\[
+\cos(\alpha)=\frac{\vec{a}\cdot\vec{b}}{|\vec{a}|\cdot|\vec{b}|}
+\]
+Ein lineares Gleichungssystem $A\cdot x=b$, wobei $A=(a_{ij})_{n\times n}$ eine $n\times n$ Matrix und
+$x=(x_i)_n$ und $b=(b_i)_n$ Vektoren mit $n$ Elementen, sind, sieht ausgeschrieben so aus:
+\[
+\left(\begin{array}{cccc}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn} \\
+\end{array}\right) 
+\left(\begin{array}{c}
+x_{1} \\
+x_{2} \\
+\vdots \\
+x_{n} \\
+\end{array}\right) =
+\left(\begin{array}{c}
+b_{1} \\
+b_{2} \\
+\vdots \\
+b_{n} \\
+\end{array}\right).
+\]
+Die Summenschreibweise f\"ur die $i$. te Zeile dieser Matrix ist dann:
+\[
+\sum_{m=1}^{n} a_{im}\cdot x_{m} = b_i.
+\]
+\end{document}
+
+
+
+
+

@@ -1,0 +1,45 @@
+% Kommentierte Quelldatei zu Video 05 der LaTeX Tipps-Tricks-Techniken
+% Serie von Thomas Erben
+% (siehe )
+
+\documentclass[12pt,a4paper]{scrartcl}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
+
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{listings}
+
+\lstset{
+	basicstyle=\ttfamily,
+	keywordstyle=\color{blue}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	commentstyle=\color{green}\ttfamily,
+	morecomment=[l][\color{magenta}]{\#}
+	columns=fullflexible,
+	frame=single,
+	breaklines=true,
+	postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+
+\begin{document}
+%
+Hier ein wenig Text um Code in Java in unser Dokument einzubinden: Und hier noch mehr Text.
+\begin{lstlisting}[language=java]
+public class MeasureStationControllerV0Test {   
+        MeasureStationControllerV0 controller;  
+        MeasureStation ms = new MeasureStation();   
+        MeasureStationConfiguration config = new MeasureStationConfiguration();     
+        DataServer dataserver = new DataServer();
+\end{lstlisting}
+\begin{lstlisting}[language=python]
+import numpy as np
+import scipy
+
+print('Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World!')
+\end{lstlisting}
+\end{document}
