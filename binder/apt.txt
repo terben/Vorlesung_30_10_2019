@@ -13,6 +13,7 @@ texlive-science
 texlive-latex-extra
 texlive-fonts-recommended
 texlive-lang-german
+lmodern
 dvipng
 ghostscript
 ffmpeg
