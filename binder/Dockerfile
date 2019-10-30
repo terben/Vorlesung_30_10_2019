@@ -148,12 +148,14 @@ RUN rm -rf binder
 RUN rm -rf tools
 #RUN rm README.md
 
-# modify .bashrc to immediately modify .bash_history after
-# each command:
+# modify .bashrc to immediately update .bash_history after
+# each command, to change the prompt and to display a startup
+# message.
 RUN echo "" >> .bashrc
 RUN echo "shopt -s histappend" >> .bashrc
 RUN echo 'PROMPT_COMMAND="history -a;$PROMPT_COMMAND"' >> .bashrc
 RUN echo 'export PS1="${debian_chroot:+($debian_chroot)}\u@EDV-Vorlesung:\w\$ "' >> .bashrc
+RUN echo 'cat .start_message' >> .bashrc
 
 ENTRYPOINT ["/usr/local/bin/repo2docker-entrypoint"]
 
